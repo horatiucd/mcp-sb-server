@@ -1,5 +1,47 @@
-### GET request to example server
-GET https://examples.http-client.intellij.net/get
-    ?generated-in=IntelliJ IDEA
+### Initialize the connection
+POST http://localhost:8081/mcp/invoices/messages?sessionId=d3849953-8d1b-4dc8-857b-f2f931b3abc7
+Accept: application/json
+
+{
+  "jsonrpc": "2.0",
+  "id": 0,
+  "method": "initialize",
+  "params": {
+    "protocolVersion": "2024-11-05",
+    "clientInfo": {
+      "name": "Exploratory MCP Client",
+      "version": "1.0.0"
+    }
+  }
+}
+
+###
+
+### List available tools
+POST http://localhost:8081/mcp/invoices/messages?sessionId=d3849953-8d1b-4dc8-857b-f2f931b3abc7
+Accept: application/json
+
+{
+  "jsonrpc": "2.0",
+  "id": "1",
+  "method": "tools/list",
+  "params": {}
+}
+
+###
+
+### Invoke the "invoicesCount" tool
+POST http://localhost:8081/mcp/invoices/messages?sessionId=d3849953-8d1b-4dc8-857b-f2f931b3abc7
+Accept: application/json
+
+{
+  "jsonrpc": "2.0",
+  "id": "2",
+  "method": "tools/call",
+  "params": {
+    "name": "invoicesCount",
+    "arguments": {}
+  }
+}
 
 ###
