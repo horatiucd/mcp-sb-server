@@ -18,7 +18,7 @@ public class InvoiceTools {
 
     @Tool(name = "get-invoices-by-pattern",
             description = "Returns all invoices filtered by the provided pattern.")
-    public List<Invoice> invoices(String pattern) {
+    public List<Invoice> invoicesBy(String pattern) {
         return invoiceService.findByPattern(pattern);
     }
 }
