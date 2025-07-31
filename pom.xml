@@ -56,7 +56,7 @@
         <dependency>
             <groupId>com.asentinel.common</groupId>
             <artifactId>asentinel-common</artifactId>
-            <version>1.70.0</version>
+            <version>1.70.1</version>
         </dependency>
         <dependency>
             <groupId>org.postgresql</groupId>
