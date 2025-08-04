@@ -21,10 +21,10 @@ public class InvoiceService {
 
     public List<Invoice> findByPattern(String pattern) {
         log.info("Retrieving invoices having '{}' in their number", pattern);
-         return orm.newSqlBuilder(Invoice.class)
-                 .select()
-                 .where()
-                 .column(Invoice.COL_NUMBER).like('%' + pattern + '%')
-                 .exec();
+        return orm.newSqlBuilder(Invoice.class)
+                .select()
+                .where()
+                .column(Invoice.COL_NUMBER).like('%' + pattern + '%')
+                .exec();
     }
 }
