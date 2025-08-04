@@ -1,5 +1,5 @@
 ### Initialize the connection
-POST http://localhost:8081/mcp/invoices/messages?sessionId=70f7e59f-6be1-47d3-8793-87432c4befd5
+POST http://localhost:8081/mcp/invoices/messages?sessionId=7bd2d41c-8643-41e6-9aa3-0b2a3e4496b4
 Accept: application/json
 
 {
@@ -18,24 +18,23 @@ Accept: application/json
 ###
 
 ### Initializes the notifications retrieval
-POST http://localhost:8081/mcp/invoices/messages?sessionId=70f7e59f-6be1-47d3-8793-87432c4befd5
+POST http://localhost:8081/mcp/invoices/messages?sessionId=7bd2d41c-8643-41e6-9aa3-0b2a3e4496b4
 Accept: application/json
 
 {
   "jsonrpc": "2.0",
-  "id": "1",
   "method": "notifications/initialized"
 }
 
 ###
 
 ### List available tools
-POST http://localhost:8081/mcp/invoices/messages?sessionId=70f7e59f-6be1-47d3-8793-87432c4befd5
+POST http://localhost:8081/mcp/invoices/messages?sessionId=7bd2d41c-8643-41e6-9aa3-0b2a3e4496b4
 Accept: application/json
 
 {
   "jsonrpc": "2.0",
-  "id": "2",
+  "id": "1",
   "method": "tools/list",
   "params": {}
 }
@@ -43,17 +42,17 @@ Accept: application/json
 ###
 
 ### Invoke the tool
-POST http://localhost:8081/mcp/invoices/messages?sessionId=70f7e59f-6be1-47d3-8793-87432c4befd5
+POST http://localhost:8081/mcp/invoices/messages?sessionId=7bd2d41c-8643-41e6-9aa3-0b2a3e4496b4
 Accept: application/json
 
 {
   "jsonrpc": "2.0",
-  "id": "3",
+  "id": "2",
   "method": "tools/call",
   "params": {
     "name": "get-invoices-by-pattern",
     "arguments": {
-        "pattern": "vdf-voip"
+        "pattern": "voip-7"
     }
   }
 }
